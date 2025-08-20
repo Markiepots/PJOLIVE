@@ -109,7 +109,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-600 via-yellow-500 to-orange-400 text-white relative">
+    <div className="min-h-screen bg-gradient-to-b from-purple-600 via-pink-500 to-cyan-400 text-white relative">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center text-center py-20 px-6">
         <Image
@@ -138,7 +138,7 @@ export default function Home() {
       {/* Inventory */}
       <section className="px-6 py-12">
         <h2 className="text-3xl font-semibold text-center mb-10 drop-shadow-lg">
-          Our Inventory
+          AVAILABLE UNITS
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {cars.map((car, index) => (
@@ -169,19 +169,21 @@ export default function Home() {
                 >
                   Select for Calculator
                 </Button>
-                <Button
-                  className="w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-xl mt-2"
-                  onClick={() =>
-                    window.open(
-                      `https://m.me/104204169192425?ref=${encodeURIComponent(
-                        "I want to reserve the unit"
-                      )}`,
-                      "_blank"
-                    )
-                  }
-                >
-                  Reserve Now
-                </Button>
+               <Button
+  className="w-full bg-red-500 hover:bg-gray-600 text-white font-semibold py-2 px-4 rounded-xl mt-2"
+  onClick={() =>
+    window.open(
+      `https://m.me/104204169192425?text=${encodeURIComponent(
+        `I want to reserve the unit: ${car.name} (₱${car.price.toLocaleString()} - Year ${car.year})`
+      )}`,
+      "_blank"
+    )
+  }
+>
+  Reserved
+</Button>
+
+
               </CardContent>
             </Card>
           ))}
