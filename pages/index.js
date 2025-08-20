@@ -7,7 +7,7 @@ export default function Home() {
   const cars = [
     { name: "2025 Toyota Vios XLE A/T", img: "/cars/vios.jpg", price: 670000 },
     { name: "2019 Nissan Nv350 Urvan Premium A/T", img: "/cars/premium.jpg", price: 1050000 },
-    { name: "2016 Hyundai Elantra", img: "/cars/elantra.jpg", price: 500000 },
+    { name: "2018 Ford Ranger Wildtrak 4x4 A/T", img: "/cars/wildtrak.jpg", price: 840000 },
     { name: "2015 Ford Focus", img: "/cars/focus.jpg", price: 480000 },
     { name: "2014 Mazda3", img: "/cars/mazda3.jpg", price: 470000 },
     { name: "2019 Ford Escape", img: "/cars/escape.jpg", price: 800000 },
