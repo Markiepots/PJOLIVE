@@ -61,11 +61,11 @@ export default function Home() {
     const transferFee = 15000;
     const insuranceFee = 20000;
 
-    // Step 5: Chattel Fee based on Original Price
+    // Step 5: Chattel Fee based on Finance Amount
     let chattelFee = 0;
-    if (price <= 500000) chattelFee = 28000;
-    else if (price <= 999999) chattelFee = 29000;
-    else if (price <= 1499999) chattelFee = 32000;
+    if (financeAmount <= 500000) chattelFee = 28000;
+    else if (financeAmount <= 999999) chattelFee = 29000;
+    else if (financeAmount <= 1499999) chattelFee = 32000;
     else chattelFee = 34000;
 
     // Step 6: Total Downpayment
